@@ -41,6 +41,7 @@ namespace FunctionApp1
 
 				await blobClient.UploadAsync(memoryStream, new BlobHttpHeaders { ContentType = "application/json" });
 				log.LogInformation($"Feedback for User ID {newFeedback.UserId} has been added.");
+				
 			}
 		}
 
