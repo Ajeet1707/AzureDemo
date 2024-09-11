@@ -1,0 +1,26 @@
+Azure tutorial:- 
+(Service bus, Azure function, Storage Blob)
+https://www.youtube.com/watch?v=0qrI7ttgp08
+
+ 
+
+
+creating Resource group
+
+	az group create --name aj_RG1 --location southeastasia
+
+Storage account
+
+	az storage account create --name ajfeedbackstorage --resource-group aj_RG1
+
+Creating Service Bus
+
+	az servicebus namespace create --resource-group aj_RG1 --name ajfeedbackbus --location southeastasia --sku Basic
+	az servicebus queue create --resource-group aj_RG1 --namespace-name ajfeedbackbus --name ajfeedbackque
+
+
+--------------------------
+
+keyvault:-
+
+COnnectionstring : "@microsoft.KeyVault(SecretUri=key_vault_url)"
